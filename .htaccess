@@ -1,0 +1,18 @@
+AddType application/wasm .wasm
+AddType application/octet-stream .data
+AddType application/javascript .js.gz
+
+<Files *.js.gz>
+  AddEncoding gzip .js
+  Header set Content-Encoding gzip
+</Files>
+
+<Files *.wasm.gz>
+  AddEncoding gzip .wasm
+  Header set Content-Encoding gzip
+</Files>
+
+<Files *.data.gz>
+  AddEncoding gzip .data
+  Header set Content-Encoding gzip
+</Files>
